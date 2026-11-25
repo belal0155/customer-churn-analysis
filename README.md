@@ -10,7 +10,7 @@ End-to-end data science mini project: clean data, query it with SQL, explore it 
 ## Steps
 1. **Cleaning:** fill missing age and spend with the median, add a feature (`spend_per_month_tenure`).
 2. **SQL:** churn rate and average spend per plan (`reports/churn_by_plan.csv`).
-3. **EDA:** plots in `eda.png` and `reports/correlation.png`.
+3. **EDA:** plots saved to `reports/` when you run the script.
 4. **ML:** Logistic Regression vs Random Forest in a scikit-learn Pipeline, 5-fold CV and a held-out test set.
 
 ## Results
@@ -21,7 +21,6 @@ End-to-end data science mini project: clean data, query it with SQL, explore it 
 
 Logistic Regression wins here. The Random Forest overfits the noisy synthetic data. Basic-plan customers churn most (18.5% vs about 12.5% for the other plans).
 
-![EDA](eda.png)
 
 ## Run it
 ```bash
