@@ -2,7 +2,7 @@
 
 [![Live demo](https://img.shields.io/badge/live%20demo-try%20it-00b8a0)](https://belal0155.github.io/churn-demo/)
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Code license](https://img.shields.io/badge/code%20license-MIT-green)
 
 A telecom company loses about 1 in 4 customers. This project answers three questions:
 
@@ -12,9 +12,17 @@ A telecom company loses about 1 in 4 customers. This project answers three quest
 
 **[Try the live demo](https://belal0155.github.io/churn-demo/)**: enter a customer profile and see the churn probability and the reasons behind it, computed in your browser.
 
-## Data
+## Data and license
 
-IBM Telco Customer Churn sample dataset: **7,043 customers, 20 features** (contract, tenure, services, billing, payment method), 26.5% churned. It is a public sample dataset published by IBM for teaching, not company production data. The copy in `data/telco_churn.csv.gz` is the unchanged CSV, gzip-compressed (pandas reads it directly).
+**Dataset.** IBM Telco Customer Churn sample dataset: 7,043 customers, 20 features (contract, tenure, services, billing, payment method), 26.5% churned. It is a fictional sample dataset that IBM published for teaching, not company production data.
+
+**Source.** IBM Business Analytics Community post "Telco customer churn": https://community.ibm.com/community/user/businessanalytics/blogs/steven-macko/2019/07/11/telco-customer-churn-1113 . A widely used copy is on Kaggle (`blastchar/telco-customer-churn`, listed as "Data files (c) Original Authors"). IBM does not state a license for the data, so it is **not included in this repository**. It remains under IBM's rights and terms.
+
+**Get the data.** Run `python scripts/download_data.py` once. It downloads the file from IBM's own GitHub repository (`IBM/telco-customer-churn-on-icp4d`), checks its checksum and saves it as `data/telco_churn.csv.gz`.
+
+**Citation.** IBM Business Analytics Community, "Telco customer churn" (sample data set), Steven Macko, 11 July 2019, URL above.
+
+**License.** The MIT License covers only the code, text and figures I wrote. It does not cover the IBM dataset.
 
 ## Key findings
 
@@ -55,7 +63,7 @@ The three models are within noise of each other on ROC-AUC. A plain logistic reg
 
 Assumptions (change them in `churn/modeling.py`): a retention offer costs $30 per contacted customer, saves 30% of customers who would really leave, and a saved customer is worth 12 months of their bill.
 
-On the test set, contacting customers with churn probability above **0.14** gives an expected profit of about **$67.8k**, against $55.7k for contacting everyone, at 91% recall and 44% precision. The profit curve is flat at the low end, so the exact threshold matters less than the idea of picking it with costs in mind. Change the cost assumptions and the best threshold moves.
+On the test set, contacting customers with churn probability above **0.14** gives a **simulated expected profit** of about **$67.8k**, against $55.7k for contacting everyone, at 91% recall and 44% precision. These dollars are not real revenue. They come from the assumed offer cost, save rate and customer value above, applied to a public sample dataset. The profit curve is flat at the low end, so the exact threshold matters less than the idea of picking it with costs in mind. Change the cost assumptions and the best threshold moves.
 
 ![Threshold](reports/figures/04_threshold_profit.png)
 
@@ -77,6 +85,7 @@ Month-to-month contracts, short tenure, fiber optic service and electronic-check
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+python scripts/download_data.py   # fetches the IBM sample data (not bundled)
 python -m churn.run     # trains, evaluates, writes reports/ (about 20 seconds)
 pytest                  # data checks
 ```
@@ -87,7 +96,8 @@ pytest                  # data checks
 churn/data.py        loading and cleaning
 churn/modeling.py    pipelines, metrics, profit function
 churn/run.py         end-to-end run: EDA, tuning, evaluation, SHAP, demo export
-data/                IBM Telco churn sample (gzip)
+data/                created by scripts/download_data.py (IBM Telco sample, not committed)
+scripts/             download_data.py
 reports/             figures, metrics.json, demo_model.json (powers the web demo)
 tests/               data checks
 ```
