@@ -14,7 +14,7 @@ A telecom company loses about 1 in 4 customers. This project answers three quest
 
 ## Data
 
-IBM Telco Customer Churn sample dataset: **7,043 customers, 20 features** (contract, tenure, services, billing, payment method), 26.5% churned. It is a public sample dataset published by IBM for teaching, not company production data. The copy in `data/telco_churn.csv` is unchanged.
+IBM Telco Customer Churn sample dataset: **7,043 customers, 20 features** (contract, tenure, services, billing, payment method), 26.5% churned. It is a public sample dataset published by IBM for teaching, not company production data. The copy in `data/telco_churn.csv.gz` is the unchanged CSV, gzip-compressed (pandas reads it directly).
 
 ## Key findings
 
@@ -87,7 +87,7 @@ pytest                  # data checks
 churn/data.py        loading and cleaning
 churn/modeling.py    pipelines, metrics, profit function
 churn/run.py         end-to-end run: EDA, tuning, evaluation, SHAP, demo export
-data/                IBM Telco churn sample
+data/                IBM Telco churn sample (gzip)
 reports/             figures, metrics.json, demo_model.json (powers the web demo)
 tests/               data checks
 ```
