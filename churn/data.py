@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "telco_churn.csv"
+DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "telco_churn.csv.gz"
 
 NUMERIC = ["tenure", "MonthlyCharges", "TotalCharges"]
 TARGET = "Churn"
