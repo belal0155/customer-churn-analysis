@@ -1,0 +1,311 @@
+{
+ "intercept": -1.4687889859599226,
+ "numeric": [
+  {
+   "name": "tenure",
+   "mean": 32.48509052183174,
+   "scale": 24.56656301538815,
+   "coef": -1.202539273498938,
+   "min": 0.0,
+   "max": 72.0,
+   "median": 29.0
+  },
+  {
+   "name": "MonthlyCharges",
+   "mean": 64.92996095136671,
+   "scale": 30.135430576006627,
+   "coef": -0.05073024884091831,
+   "min": 18.25,
+   "max": 118.75,
+   "median": 70.35
+  },
+  {
+   "name": "TotalCharges",
+   "mean": 2299.33468228612,
+   "scale": 2279.001996496138,
+   "coef": 0.47491992465845817,
+   "min": 0.0,
+   "max": 8684.8,
+   "median": 1394.55
+  }
+ ],
+ "categorical": [
+  {
+   "name": "gender",
+   "values": [
+    "Female",
+    "Male"
+   ],
+   "weights": {
+    "Female": 0.0,
+    "Male": 0.021525570724256225
+   },
+   "freq": {
+    "Male": 0.504756495811444,
+    "Female": 0.495243504188556
+   }
+  },
+  {
+   "name": "SeniorCitizen",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": 0.14806622851258436
+   },
+   "freq": {
+    "No": 0.8378531875621185,
+    "Yes": 0.1621468124378816
+   }
+  },
+  {
+   "name": "Partner",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": 0.016774733751515863
+   },
+   "freq": {
+    "No": 0.5169672014766434,
+    "Yes": 0.4830327985233565
+   }
+  },
+  {
+   "name": "Dependents",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": -0.22008755225835436
+   },
+   "freq": {
+    "No": 0.7004117563538265,
+    "Yes": 0.2995882436461735
+   }
+  },
+  {
+   "name": "PhoneService",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": -0.5101049951311079
+   },
+   "freq": {
+    "Yes": 0.9031662643759761,
+    "No": 0.09683373562402385
+   }
+  },
+  {
+   "name": "MultipleLines",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": 0.29225359167926435
+   },
+   "freq": {
+    "No": 0.5781627147522362,
+    "Yes": 0.42183728524776376
+   }
+  },
+  {
+   "name": "InternetService",
+   "values": [
+    "DSL",
+    "Fiber optic",
+    "No"
+   ],
+   "weights": {
+    "DSL": -0.15353988825711948,
+    "Fiber optic": 0.6928700196111517,
+    "No": -0.9903998647277958
+   },
+   "freq": {
+    "Fiber optic": 0.4395854039471816,
+    "DSL": 0.34374556297032516,
+    "No": 0.21666903308249325
+   }
+  },
+  {
+   "name": "OnlineSecurity",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": -0.4073425479199711
+   },
+   "freq": {
+    "No": 0.7133323867670027,
+    "Yes": 0.2866676132329973
+   }
+  },
+  {
+   "name": "OnlineBackup",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": -0.16170816545861844
+   },
+   "freq": {
+    "No": 0.6551185574329121,
+    "Yes": 0.3448814425670879
+   }
+  },
+  {
+   "name": "DeviceProtection",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": -0.027484380751720307
+   },
+   "freq": {
+    "No": 0.6561124520800795,
+    "Yes": 0.3438875479199205
+   }
+  },
+  {
+   "name": "TechSupport",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": -0.35894654038421053
+   },
+   "freq": {
+    "No": 0.7097827630271192,
+    "Yes": 0.2902172369728809
+   }
+  },
+  {
+   "name": "StreamingTV",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": 0.2423214746122088
+   },
+   "freq": {
+    "No": 0.6156467414454068,
+    "Yes": 0.38435325855459324
+   }
+  },
+  {
+   "name": "StreamingMovies",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": 0.24198869872804282
+   },
+   "freq": {
+    "No": 0.6120971177055232,
+    "Yes": 0.3879028822944768
+   }
+  },
+  {
+   "name": "Contract",
+   "values": [
+    "Month-to-month",
+    "One year",
+    "Two year"
+   ],
+   "weights": {
+    "Month-to-month": 0.5287429562785806,
+    "One year": -0.17364104690840818,
+    "Two year": -0.8061716427439539
+   },
+   "freq": {
+    "Month-to-month": 0.5501916796819537,
+    "Two year": 0.24066448956410622,
+    "One year": 0.20914383075394008
+   }
+  },
+  {
+   "name": "PaperlessBilling",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "weights": {
+    "No": 0.0,
+    "Yes": 0.3712798047758053
+   },
+   "freq": {
+    "Yes": 0.5922192247621753,
+    "No": 0.4077807752378248
+   }
+  },
+  {
+   "name": "PaymentMethod",
+   "values": [
+    "Bank transfer (automatic)",
+    "Credit card (automatic)",
+    "Electronic check",
+    "Mailed check"
+   ],
+   "weights": {
+    "Bank transfer (automatic)": -0.21855789309270832,
+    "Credit card (automatic)": -0.2500821724369574,
+    "Electronic check": 0.16584928267213214,
+    "Mailed check": -0.1482789505162198
+   },
+   "freq": {
+    "Electronic check": 0.3357944057929859,
+    "Mailed check": 0.22887973874769274,
+    "Bank transfer (automatic)": 0.21922476217520942,
+    "Credit card (automatic)": 0.2161010932841119
+   }
+  }
+ ],
+ "threshold_note": "Probabilities come from the Logistic Regression model.",
+ "test_example": {
+  "row": {
+   "tenure": 72,
+   "MonthlyCharges": 114.05,
+   "TotalCharges": 8468.2,
+   "gender": "Male",
+   "SeniorCitizen": "No",
+   "Partner": "Yes",
+   "Dependents": "Yes",
+   "PhoneService": "Yes",
+   "MultipleLines": "Yes",
+   "InternetService": "Fiber optic",
+   "OnlineSecurity": "Yes",
+   "OnlineBackup": "Yes",
+   "DeviceProtection": "Yes",
+   "TechSupport": "Yes",
+   "StreamingTV": "Yes",
+   "StreamingMovies": "Yes",
+   "Contract": "Two year",
+   "PaperlessBilling": "Yes",
+   "PaymentMethod": "Credit card (automatic)"
+  },
+  "proba": 0.04465397113649233
+ }
+}

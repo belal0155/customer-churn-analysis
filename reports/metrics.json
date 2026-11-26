@@ -1,0 +1,104 @@
+{
+  "n_customers": 7043,
+  "n_train": 5634,
+  "n_test": 1409,
+  "eda": {
+    "churn_rate": 0.2653698707936959,
+    "by_contract": {
+      "Month-to-month": 0.4270967741935484,
+      "One year": 0.11269517990495587,
+      "Two year": 0.02831858407079646
+    },
+    "by_internet": {
+      "DSL": 0.1895910780669145,
+      "Fiber optic": 0.4189276485788114,
+      "No": 0.07404980340760157
+    },
+    "first_year": 0.47438243366880145,
+    "after_year": 0.17129915585752523
+  },
+  "xgb_best_params": {
+    "reg_lambda": 10,
+    "n_estimators": 200,
+    "min_child_weight": 10,
+    "max_depth": 3,
+    "learning_rate": 0.05
+  },
+  "models": {
+    "Baseline (majority class)": {
+      "cv_roc_auc": 0.5,
+      "cv_roc_auc_std": 0.0,
+      "test_roc_auc": 0.5,
+      "test_pr_auc": 0.2654364797728886,
+      "test_brier": 0.1949799619120813,
+      "test_precision": 0.0,
+      "test_recall": 0.0
+    },
+    "Logistic Regression": {
+      "cv_roc_auc": 0.8459882397188533,
+      "cv_roc_auc_std": 0.012385350103263049,
+      "test_roc_auc": 0.8422614895760676,
+      "test_pr_auc": 0.635407971936252,
+      "test_brier": 0.13790679604375483,
+      "test_precision": 0.646875,
+      "test_recall": 0.553475935828877
+    },
+    "Random Forest": {
+      "cv_roc_auc": 0.8443752608037849,
+      "cv_roc_auc_std": 0.010752498867503164,
+      "test_roc_auc": 0.8431630886873853,
+      "test_pr_auc": 0.6533164511864585,
+      "test_brier": 0.13598797446413186,
+      "test_precision": 0.6722408026755853,
+      "test_recall": 0.5374331550802139
+    },
+    "XGBoost": {
+      "cv_roc_auc": 0.8493336835105545,
+      "cv_roc_auc_std": 0.011822687892167049,
+      "test_roc_auc": 0.8480495492004443,
+      "test_pr_auc": 0.6638303304128244,
+      "test_brier": 0.13491936105690172,
+      "test_precision": 0.6587837837837838,
+      "test_recall": 0.5213903743315508
+    }
+  },
+  "selected_model": "XGBoost",
+  "threshold": {
+    "value": 0.14,
+    "profit": 67813.31999999998,
+    "contact_everyone_profit": 55703.639999999985,
+    "precision": 0.4445893089960887,
+    "recall": 0.9117647058823529,
+    "assumptions": {
+      "offer_cost_usd": 30,
+      "save_rate": 0.3,
+      "months_value": 12
+    }
+  },
+  "top_features": [
+    {
+      "feature": "Contract",
+      "auc_drop": 0.08719651760572479
+    },
+    {
+      "feature": "tenure",
+      "auc_drop": 0.04368971040326539
+    },
+    {
+      "feature": "InternetService",
+      "auc_drop": 0.028752357332919955
+    },
+    {
+      "feature": "TotalCharges",
+      "auc_drop": 0.008413418068149447
+    },
+    {
+      "feature": "MonthlyCharges",
+      "auc_drop": 0.005624919269420469
+    },
+    {
+      "feature": "PaymentMethod",
+      "auc_drop": 0.004243845100622534
+    }
+  ]
+}
